@@ -135,6 +135,14 @@ auth.settings.reset_password_requires_verification = True
 db.define_table('Usuario',
                 Field('Tipo'),
                Field('Usuario'),
-               Field('Pass')
+               Field('Nombre'),
+               Field('Apellido'),
+               Field('Pass'),
+               Field('Codigo'),
+               Field('image', type="upload" ),
+               Field('Estudios'),
+               Field('Edad'),
+               Field('Skills'),
+               Field('idioma')
                )
 
