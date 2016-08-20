@@ -4,20 +4,20 @@ p2
 (dp3
 S'sortable'
 p4
-I2
+L2L
 sS'sql'
 p5
 S'INTEGER REFERENCES Comercio (id) ON DELETE CASCADE  '
 p6
 sS'length'
 p7
-I512
+L512L
 sS'notnull'
 p8
-I00
+L0L
 sS'unique'
 p9
-I00
+L0L
 sS'type'
 p10
 S'reference Comercio'

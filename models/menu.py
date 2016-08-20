@@ -5,7 +5,7 @@
 # Customize your APP title, subtitle and menus here
 # ----------------------------------------------------------------------------------------------------------------------
 
-response.logo = A(B('Hackaton', SPAN('express'), ''), XML(''),
+response.logo = A(B('Know', SPAN('me'), ''), XML(''),
                   _class="navbar-brand", _target="_blank", _href="http://www.hackathonexpress.com.ar/2016/",
                   _id="web2py-logo")
 response.title = request.application.replace('_', ' ').title()

@@ -1,5 +1,5 @@
 def index():
-	response.view="home/LogIn.html"
+	response.view="home/Main.html"
 	return dict(msj="")
 
 def login():
