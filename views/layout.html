@@ -61,39 +61,44 @@
           {{=response.logo or ''}}
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-        {{if session.usuario != None:}}
+        
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown" data-w2pmenulevel="l0">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" rel="nofollow">
             
-
+            {{if session.usuario != None:}}
             {{=session.usuario}}
-
+            {{else:}}
+            Acceder
+            {{pass}}
            
 
             </a>
 
             <ul class="dropdown-menu">
             
-            <li><a href="{{=URL('inicio','registrar')}}" rel="nofollow"><i class="icon icon-user glyphicon glyphicon-user"></i>Registrar un usuario</a>
+            <li><a href="{{=URL('home','registrar')}}" rel="nofollow"><i class="icon icon-user glyphicon glyphicon-user"></i>Registrar</a>
             </li>
             
-            <li><a href="#" rel="nofollow"><i class="icon icon-lock glyphicon glyphicon-lock"></i> Editar Usuario</a></li>
+            <li><a href="#" rel="nofollow"><i class="icon icon-lock glyphicon glyphicon-lock"></i> Perfil</a></li>
 
             <li class="divider"></li>
-            {{if session.usuario == "":}}
-            <li><a href="#" rel="nofollow"><i class="icon icon-off glyphicon glyphicon-off"></i> Iniciar Session</a>
+            {{if session.usuario == None:}}
+            <li><a href="{{=URL('home','login1')}}" rel="nofollow"><i class="icon icon-off glyphicon glyphicon-off"></i> Iniciar Session</a>
             {{else:}}
              <li><a href="{{=URL('home','cerrar')}}" rel="nofollow"><i class="icon icon-off glyphicon glyphicon-off"></i> Cerrar Session</a>
-             {{pass}}
+            {{pass}}
             </li>
             </ul>
             </li>
           </ul>
-           {{pass}}
+   
 
           {{if response.menu:}}
           {{=MENU(response.menu, _class='nav navbar-nav',li_class='dropdown',ul_class='dropdown-menu')}}
+
+
+          
           {{pass}}
         </div>
       </div>

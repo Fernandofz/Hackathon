@@ -8,21 +8,27 @@
     
 
       <div class="col-xs-12 col-xs-offset-4 col-md-12 col-md-offset-4">
-        <form action="{{=URL('inicio','registroCorrecto')}}" method="post">
+        <form action="{{=URL('home','registroCorrecto')}}" method="post">
           <header>Registra un usuario nuevo</header>
           <label>Usuario </label>
           <select style="font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;" name="tipoU" id="holi">
-            <option value="Administrador">Administrador</option>
-            <option value="Operador">Operador</option>
+            <option value="Administrador">Individuo</option>
+            <option value="Operador">Organizador</option>
           </select>
           <input required type="text" name="Usuario"/>
           <div class="help">Debe contener al menos 6 caracteres</div>
           <label>Contraseña </label>
-
-
-          
-
           <input required type="password" name="Pass"/>
+         <label>Foto </label>
+          <input type="file" name="pic">
+         <label>Nombre </label>
+          <input required type="text" name="Nombre"/>
+         <label>Edad </label>
+          <input required type="text" name="Edad"/>
+         <label>Estudio </label>
+          <input required type="text" name="Estudio"/>
+         <label>Idioma </label>
+          <input required type="text" name="Idioma"/>
 
           <button>Verificar Datos</button>
           <br>

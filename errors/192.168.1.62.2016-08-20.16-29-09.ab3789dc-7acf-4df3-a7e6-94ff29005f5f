@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.ValueError'> invalid literal for long() with base 10: 'Usuario.image.b7d602cd4fd0e549.31393236322d4e53393530502e6a7067.jpg'"
+p3
+sS'layer'
+p4
+S'F:\\Informatorio\\web2py\\applications\\knowme\\controllers/persona.py'
+p5
+sS'code'
+p6
+S'def index():\n\tif session.usuario!=None:\n\t\tresponse.view="Persona/index.html"\n\t\tpersona= db(db.Usuario.Usuario==session.usuario).select()\n\t\treturn dict(persona=persona)\n\telse:\n\t\tredirect(URL(\'home\',\'main\'))\n\ndef show():\n\tpersona= db(db.Usuario.id==request.args(0)).select()\n\n\tresponse.view="Persona/index.html"\n\treturn dict(persona=persona)\n\nresponse._vars=response._caller(show)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "F:\\Informatorio\\web2py\\gluon\\restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "F:\\Informatorio\\web2py\\applications\\knowme\\controllers/persona.py", line 15, in <module>\n  File "F:\\Informatorio\\web2py\\gluon\\globals.py", line 417, in <lambda>\n    self._caller = lambda f: f()\n  File "F:\\Informatorio\\web2py\\applications\\knowme\\controllers/persona.py", line 10, in show\n    persona= db(db.Usuario.id==request.args(0)).select()\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\objects.py", line 2020, in select\n    return adapter.select(self.query, fields, attributes)\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\sqlite.py", line 123, in select\n    return super(SQLiteAdapter, self).select(query, fields, attributes)\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 1283, in select\n    sql = self._select(query, fields, attributes)\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 1170, in _select\n    sql_w = \' WHERE \' + self.expand(query) if query else \'\'\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 952, in expand\n    rv = op(first, second, **optional_args)\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 846, in EQ\n    self.expand(second, first.type))\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 962, in expand\n    rv = self.represent(expression, field_type)\n  File "F:\\Informatorio\\web2py\\gluon\\packages\\dal\\pydal\\adapters\\base.py", line 1435, in represent\n    return str(long(obj))\nValueError: invalid literal for long() with base 10: \'Usuario.image.b7d602cd4fd0e549.31393236322d4e53393530502e6a7067.jpg\'\n'
+p11
+s.
