@@ -1,0 +1,90 @@
+#alumno,#profesor {
+  width: 150px;
+  height: 200px;
+}
+
+form {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #c8c4b8;
+  width: 40%;
+  min-width: 250px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+  font-family: lato;
+  position: relative;
+  color: #333;
+  border-radius: 10px;
+  margin-top: 30px
+}
+form header {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #19171a;
+  padding: 30px 20px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+      text-shadow: 1px 1px black,-1px -1px black,-1px 1px black,1px -1px black;
+}
+
+form label {
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  position: relative;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+form label span {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FF3838;
+  font-size: 2em;
+  position: absolute;
+  left: 2.3em;
+  top: -10px;
+}
+
+form input {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+  width: 90%;
+  margin-left: 20px;
+  padding: 5px 20px;
+  font-size: 1em;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+form .help {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 20px;
+  font-size: 0.8em;
+  color: #777;
+}
+
+form button {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  color: white;
+  background: #FF3838;
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1.3em;
+  font-weight: 400;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+form button:hover {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ff5252;
+}

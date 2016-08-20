@@ -1,0 +1,47 @@
+{{extend 'layout.html'}}
+<head>
+	<link rel="stylesheet" href="{{=URL('static','css/style-login.css')}}">
+</head>
+
+  <body>
+
+    
+    {{if msj=="":}}
+      <div class="col-xs-12  col-md-12 col-md-offset-4">
+        <form action="{{=URL('home','login')}}" method="post">
+          <center>
+          <header style="font-size: 25px; color: #fee100">Ingreso</header>
+          </center>	
+          <label>Usuario </label>
+          <input required type="text" name="Usuario"/>
+          <div class="help">Al menos debe contener 6 caracteres</div>
+          <label>Contraseña </label>
+          <input required type="password" name="Pass"/>
+          <div class="help"><a href="" style="color:#19171a">Recuperar Contraseña</a></div>
+          <button id="prueba">Verificar Datos</button>
+          <br>
+          <br>
+          <br>
+        </form>
+      </div>
+      {{elif msj=="Bienvenido":}}
+        <div  class=" hidden col-xs-12 col-xs-offset-4 col-md-12 col-md-offset-4">
+          <form action="{{=URL('home','main')}}" name="form1">
+          <header>Inicio Correcto!</header>
+           <button type="submit" class="button button-block"/><h1>Acceder</h1></button>
+            <br>
+            <br>
+            <br>
+           </form>
+         </div>
+
+         <script src="{{=URL('static','js/inicio.js')}}"></script>
+      {{else:}}
+
+      {{pass}}
+ 
+    
+    
+    
+    
+  </body>

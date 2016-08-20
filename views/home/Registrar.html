@@ -1,0 +1,37 @@
+{{extend 'layout.html'}}
+<head>
+	<link rel="stylesheet" href="{{=URL('static','css/style-login.css')}}">
+</head>
+
+  <body>
+
+    
+
+      <div class="col-xs-12 col-xs-offset-4 col-md-12 col-md-offset-4">
+        <form action="{{=URL('inicio','registroCorrecto')}}" method="post">
+          <header>Registra un usuario nuevo</header>
+          <label>Usuario </label>
+          <select style="font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;" name="tipoU" id="holi">
+            <option value="Administrador">Administrador</option>
+            <option value="Operador">Operador</option>
+          </select>
+          <input required type="text" name="Usuario"/>
+          <div class="help">Debe contener al menos 6 caracteres</div>
+          <label>Contraseña </label>
+
+
+          
+
+          <input required type="password" name="Pass"/>
+
+          <button>Verificar Datos</button>
+          <br>
+          <br>
+          <br>
+        </form>
+      </div>
+
+    
+    
+    
+  </body>
