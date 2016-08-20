@@ -12,6 +12,14 @@ body{
 
 }
 
+
+#block1{
+    background: url(../images/block1.png) no-repeat left center;
+    background-color: #c8c4b8;
+    background-size: contain;
+    min-height: 300px;
+}
+
 a:link {
     color: red;
 }
