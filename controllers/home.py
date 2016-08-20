@@ -21,6 +21,7 @@ def login():
 
 def registrar():
 	response.view="home/Registrar.html"
+
 	return dict()
 
 def registroCorrecto():
