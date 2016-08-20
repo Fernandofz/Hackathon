@@ -49,7 +49,7 @@ def _():
     # useful links to internal and external resources
     # ------------------------------------------------------------------------------------------------------------------
     if session.usuario != None:
-        response.menu += [(T('Contenido'), False, '#', [(T('Foro'), False, URL('#', '#')),LI(_class="divider"),(T('Materias'), False, URL('#', '#')),(T('Calendario'), False, URL('#', '#'))]),]
+        response.menu += [(T('Contenido'), False, '#', [(T('Personas'), False, URL('Persona', 'index')),LI(_class="divider"),(T('Instituciones'), False, URL('institucion', 'index')),(T('evento'), False, URL('#', '#'))]),]
 
 
 

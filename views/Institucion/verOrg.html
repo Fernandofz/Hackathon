@@ -1,1 +1,62 @@
 {{extend 'layout.html'}}
+
+{{extend 'layout.html'}}
+
+<div class="col-md-10 col-md-offset-1">
+	<div  style="background-color:rgba(200, 196, 184, 0.7);color:white;padding:20px; border-radius:10px;">
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-2"> <h2>Instituciones</h2></div>
+				<div class="col-md-2 col-md-offset-9">
+					<input style="color:black;" list="browsers">
+					<datalist id="browsers">
+					{{for pers in busqueda:}}
+					  <option value="{{=pers.Nombre}}">
+					  {{pass}}
+					  
+					</datalist>
+				</div>
+				<div class="col-md-1">
+					 <a href="/Knowme/home/index"><button style="padding:4px 10px;" class="glyphicon glyphicon-search"></button></a>
+				</div>
+			</div>
+		</div>	
+          
+         
+
+	</div>
+</div>
+
+<div class="col-md-10 col-md-offset-1">
+<br>
+	<div  style="background-color:rgba(200, 196, 184, 0.7);color:white;padding:20px; border-radius:10px;">
+
+		<div align="center">
+		{{if persona[0].Nombre=="UTN":}}
+			<img  width="400px" src="{{=URL('static','images/utn.png')}}"  alt="">
+		{{else:}}
+		<img class="img-thumbnail" width="400px" src="{{=URL('static','images/unne.jpg')}}"  alt="">
+		{{pass}}
+		</div>
+		<div>
+			<h1>{{=persona[0].Nombre}}</h1>
+		</div>
+	
+		<div>
+			<h2>Descripcion: {{=persona[0].Estudios}}</h2>
+		</div>
+		<div>
+			<h2>Direccion: {{=persona[0].idioma}}</h2>
+		</div>
+		<div>
+		<button data-toggle="collapse" data-target="#QR">Generar codigo QR</button>
+		</div>
+		<div id="QR" class="collapse">
+			<img src="https://api.qrserver.com/v1/create-qr-code/?data=192.168.1.62:8000/Knowme/Persona/show/{{=persona[0].id}}" alt="">
+
+		</div>
+	</div>
+	<br>
+
+</div>

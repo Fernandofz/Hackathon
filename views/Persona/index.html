@@ -9,7 +9,7 @@
 				<div class="col-md-2 col-md-offset-9">
 					<input style="color:black;" list="browsers">
 					<datalist id="browsers">
-					{{for pers in persona:}}
+					{{for pers in busqueda:}}
 					  <option value="{{=pers.Nombre}}">
 					  {{pass}}
 					  
@@ -49,7 +49,7 @@
 		<button data-toggle="collapse" data-target="#QR">Generar codigo QR</button>
 		</div>
 		<div id="QR" class="collapse">
-			<img src="https://api.qrserver.com/v1/create-qr-code/?data=192.168.1.62:8000/kwnowme/persona/show/{{=persona[0].id}}" alt="">
+			<img src="https://api.qrserver.com/v1/create-qr-code/?data=192.168.1.62:8000/Knowme/Persona/show/{{=persona[0].id}}" alt="">
 
 		</div>
 	</div>
